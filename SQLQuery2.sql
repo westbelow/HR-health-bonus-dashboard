@@ -5,7 +5,7 @@ ON a.Reason_for_absence = b.Number
 LEFT JOIN compensation c
 ON a.ID = c.ID;
 
--- find the healthiest people at work
+-- find the healthiest people at work, 111 people qualify based on criteria
 SELECT ID, body_mass_index FROM Absenteeism_at_work
 WHERE social_drinker = 0 AND social_smoker=0 AND body_mass_index < 25 AND Absenteeism_time_in_hours < (select AVG(absenteeism_time_in_hours) from Absenteeism_at_work)
 
