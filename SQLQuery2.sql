@@ -27,7 +27,7 @@ CASE WHEN Month_of_absence IN (12, 1, 2) THEN 'Winter'
 	WHEN Month_of_absence IN (3, 4, 5) THEN 'Spring'
 	WHEN Month_of_absence IN (6, 7, 8) THEN 'Summer'
 	WHEN Month_of_absence IN (9, 10, 11) THEN 'Fall'
-	ELSE 'Unknown' end as Season,
+	ELSE 'Unknown' end as Season_Names,
 Month_of_absence,
 Day_of_the_week,
 Transportation_expense,
